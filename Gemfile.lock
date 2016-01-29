@@ -10,35 +10,57 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.4.0)
-    domain_name (0.5.25)
-      unf (>= 0.0.5, < 1.0.0)
+    activemodel (4.2.5.1)
+      activesupport (= 4.2.5.1)
+      builder (~> 3.1)
+    activerecord (4.2.5.1)
+      activemodel (= 4.2.5.1)
+      activesupport (= 4.2.5.1)
+      arel (~> 6.0)
+    activesupport (4.2.5.1)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    arel (6.0.3)
+    builder (3.2.2)
+    coderay (1.1.0)
     haml (4.0.7)
       tilt
-    http (1.0.2)
-      addressable (~> 2.3)
-      http-cookie (~> 1.0)
-      http-form_data (~> 1.0.1)
-      http_parser.rb (~> 0.6.0)
-    http-cookie (1.0.2)
-      domain_name (~> 0.5)
-    http-form_data (1.0.1)
-    http_parser.rb (0.6.0)
+    i18n (0.7.0)
+    json (1.8.3)
+    method_source (0.8.2)
+    minitest (5.8.4)
+    mysql2 (0.3.15)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.5.5)
     rack-protection (1.5.3)
       rack
+    rake (10.5.0)
+    sinatra-activerecord (2.0.9)
+      activerecord (>= 3.2)
+      sinatra (~> 1.0)
+    slop (3.6.0)
+    thread_safe (0.3.5)
     tilt (2.0.2)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.1)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord
   haml
-  http
+  mysql2
+  pry
+  rake
   sinatra!
+  sinatra-activerecord
 
 BUNDLED WITH
    1.11.2
