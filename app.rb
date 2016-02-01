@@ -14,13 +14,23 @@ class HTTPApp < Sinatra::Base
     haml :index
   end
 
+  # FIXME: I'm not RESTful!
   get '/squirrels' do
     if params['name'] == 'Leo'
       haml :leo
+    elsif params['name'] == 'DDM'
+      haml :ddm
     else
       haml :squirrels
     end
   end
 
+  post '/squirrels' do
+    name = params[:name]
+    desc = params[:description]
+    squirrel = Squirrel.new(:name => name, :description => desc)
+    squirrel.save!
+    haml :squirrels
+  end
 end
 
