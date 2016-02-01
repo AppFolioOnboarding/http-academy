@@ -14,4 +14,9 @@ class HTTPApp < Sinatra::Base
     haml :index
   end
 
+  get '/squirrels' do
+    haml :squirrels
+  end
+
 end
+
