@@ -14,4 +14,13 @@ class HTTPApp < Sinatra::Base
     haml :index
   end
 
+  get '/squirrels' do
+    if params['name'] == 'Leo'
+      haml :leo
+    else
+      haml :squirrels
+    end
+  end
+
 end
+
