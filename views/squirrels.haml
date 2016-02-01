@@ -2,3 +2,12 @@
 %p Here is your list of Squirrels:
 %li
   %a{href: "/squirrels?name=Leo"} Leo the Squirrel
+
+%h3 Create a new squirrel!
+%form{ action: "", method: "post" }
+  %fieldset
+    %li
+      %label{for: "name"} Squirrel name:
+      %input{type: "text", name: "name", class: "text"}
+    %input{type: "submit", value: "Create Squirrel", class: "button"}
+
