@@ -1,7 +1,11 @@
 %h1 Squirrels!
+
+-# FIXME: I'm not DRY!
 %p Here is your list of Squirrels:
 %li
   %a{href: "/squirrels?name=Leo"} Leo the Squirrel
+%li
+  %a{href: "/squirrels?name=DDM"} DDM the Squirrel
 
 %h3 Create a new squirrel!
 %form{ action: "", method: "post" }
@@ -9,5 +13,8 @@
     %li
       %label{for: "name"} Squirrel name:
       %input{type: "text", name: "name", class: "text"}
+    %li
+      %label{for: "description"} Description:
+      %input{type: "text", name: "description", class: "text"}
     %input{type: "submit", value: "Create Squirrel", class: "button"}
 
