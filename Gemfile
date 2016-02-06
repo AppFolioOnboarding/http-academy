@@ -8,3 +8,7 @@ gem 'mysql2'
 gem 'rake'
 gem 'haml'
 gem 'pry'
+
+group :test do
+  gem 'rack-test'
+end
