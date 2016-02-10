@@ -17,11 +17,11 @@ class HTTPApp < Sinatra::Base
   # FIXME: I'm not RESTful!
   get '/squirrels' do
     if params['name'] == 'Leo'
-      haml :leo
+      erb :leo
     elsif params['name'] == 'DDM'
-      haml :ddm
+      erb :ddm
     else
-      haml :squirrels
+      erb :squirrels
     end
   end
 
@@ -30,7 +30,7 @@ class HTTPApp < Sinatra::Base
     desc = params[:description]
     squirrel = Squirrel.new(:name => name, :description => desc)
     squirrel.save!
-    haml :squirrels
+    erb :squirrels
   end
 end
 

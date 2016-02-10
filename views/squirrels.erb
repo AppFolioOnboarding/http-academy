@@ -1,0 +1,29 @@
+<h1>Squirrels</h1>
+
+<%# #FIXME: I'm not DRY! %>
+
+<p>Here is your list of Squirrels:</p>
+<li>
+  <a href="/squirrels?name=Leo">Leo the Squirrel</a>
+</li>
+
+<li>
+  <a href="/squirrels?name=DDM">DDM the Squirrel</a>
+</li>
+
+<div id="new_squirrel_form">
+  <h3>Create a new squirrel!</h3>
+  <form action="", method="post">
+    <fieldset>
+      <li>
+        <label for="name">Squirrel name:</label>
+        <input type="text", name="name", class="text">
+      </li>
+      <li>
+        <label for="description">Description:</label>
+        <input type="text", name="description", class="text">
+      </li>
+      <input type="submit", name="Create Squirrel", class="button">
+    </fieldset>
+  </form>
+</div>
