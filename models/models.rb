@@ -1,5 +1,7 @@
-class Squirrel < ActiveRecord::Base
-end
+module Models
+  class Squirrel < ActiveRecord::Base
+  end
 
-class User < ActiveRecord::Base
+  class User < ActiveRecord::Base
+  end
 end
