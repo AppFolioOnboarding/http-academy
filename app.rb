@@ -11,7 +11,7 @@ class HTTPApp < Sinatra::Base
   use Handlers::HttpAuthentication
 
   get '/' do
-    haml :index
+    haml :root
   end
 
   # FIXME: I'm not RESTful!
